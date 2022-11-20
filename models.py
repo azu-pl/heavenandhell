@@ -13,3 +13,10 @@ class Student(Base):
     pesel = Column(String(11), unique=True, nullable=False)
     phone = Column(String(20))
     adress = Column(String(50))
+
+
+class OnlineCourse(Base):
+    __tablename__ = 'online_courses'
+
+    id = Column(Integer, primary_key=True)
+    url = Column(String(50), nullable=False)
